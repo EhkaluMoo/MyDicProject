@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IAH-bE-7qC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="knu.TTF">
+            <string>Karen-Normal</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--EngKaren-->
+        <scene sceneID="eSe-wn-KEp">
+            <objects>
+                <tableViewController id="NHO-iO-ZCT" customClass="MyTableViewController" customModule="MyDic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Hl-l7-Ciz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="1tW-Zj-sYC">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.79528768165479158" green="0.83164911684782605" blue="0.80954253210622606" alpha="1" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            <scopeButtonTitles>
+                                <string></string>
+                                <string></string>
+                                <string></string>
+                                <string></string>
+                                <string></string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="NHO-iO-ZCT" id="yp1-Xt-USv"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="47" id="4EN-r0-mMS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4EN-r0-mMS" id="5le-ux-DOQ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dGc-u4-0f3" kind="show" identifier="Detail" trigger="accessoryAction" id="7op-Kc-msM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NHO-iO-ZCT" id="RhD-Wl-Qhp"/>
+                            <outlet property="delegate" destination="NHO-iO-ZCT" id="9m7-hb-EG0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="EngKaren" id="yMr-nx-RlM"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="aNI-Hr-bEI" id="Gwf-JL-uQp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pih-u1-ndL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="aNI-Hr-bEI">
+                    <connections>
+                        <outlet property="delegate" destination="NHO-iO-ZCT" id="5kG-qm-mMn"/>
+                        <outlet property="searchBar" destination="1tW-Zj-sYC" id="wwa-mL-RMo"/>
+                        <outlet property="searchContentsController" destination="NHO-iO-ZCT" id="0uT-u7-Ma4"/>
+                        <outlet property="searchResultsDataSource" destination="NHO-iO-ZCT" id="MNH-uK-hE3"/>
+                        <outlet property="searchResultsDelegate" destination="NHO-iO-ZCT" id="WOc-kk-YWL"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="78" y="159"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EeB-i1-cQi">
+            <objects>
+                <viewController id="dGc-u4-0f3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bkh-aO-NAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="vXl-bH-WnZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="muB-o0-XLd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Defination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1z-8P-5nH">
+                                <rect key="frame" x="16" y="184" width="441" height="82"/>
+                                <fontDescription key="fontDescription" name="Karen-Normal" family="KNU" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Defination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLD-Ud-vzY">
+                                <rect key="frame" x="-26" y="51" width="441" height="213"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mWZ-oC-Tjo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QlD-wr-Zuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="159"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tX1-eH-lpm">
+            <objects>
+                <navigationController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IAH-bE-7qC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CCt-14-IUR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NHO-iO-ZCT" kind="relationship" relationship="rootViewController" id="VOV-At-Oly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EoH-KR-2X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="159"/>
+        </scene>
+    </scenes>
+</document>
